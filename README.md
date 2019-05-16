@@ -16,10 +16,11 @@ NeteaseCloudMusic-Now-Playing
 
 将 src/cli/script.py 复制至可执行文件所在目录，并保证 libncmnp.dylib 在同一目录下。
 
-> 可以对 script.py 中的 on_updated 函数体进行修改，但不推荐修改函数签名。另外由于脚本
-> 部分将使用 execv 调用 python，引入更多外部依赖可能会导致运行时出现未知问题，因此推荐
-> 在 script.py 中仅进行本地文件 I/O 操作（如更新记录当前播放歌曲信息的文件）。这种情况下
-> 可以配合外部单独运行的 File watcher 来进行更复杂的操作。
+可以对 script.py 中的 on_updated 函数体进行修改，但不推荐修改函数签名。
+
+另外由于脚本部分将使用 execv 调用 python，引入更多外部依赖可能会导致运行时出现未知问题，因此推荐在 script.py 中仅进行本地文件 I/O 操作（如更新记录当前播放歌曲信息的文件）。
+
+这种情况下可以配合外部单独运行的 File watcher 来进行更复杂的操作。
 
 ```
 sudo ./ncmnp $(pgrep NeteaseMusic)
