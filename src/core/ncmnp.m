@@ -160,7 +160,7 @@ void handle_trap(th_state_t *thread_state) {
             if (current_song_info._song_updated || current_song_info._artist_updated ||
                 current_song_info._album_updated) {
                 if (_func_on_update != NULL) {
-                    _func_on_update(&current_song_info, startup_uid);
+                    _func_on_update(&current_song_info);
                 }
             }
             current_song_info._song_updated = 0;

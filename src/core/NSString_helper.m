@@ -48,6 +48,7 @@ void copy_NSString_to_c_str(void *nss_ptr, char *buffer, unsigned long buffer_si
     NSString *str = (__bridge NSString *) (ns_str_mem);
     const char *c_str = [str UTF8String];
     memcpy(buffer, c_str, MIN(buffer_size, strlen(c_str) + 1));
+    buffer[buffer_size - 1] = 0;
     free(ns_str_mem);
 }
 #endif

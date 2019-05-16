@@ -16,8 +16,8 @@ typedef struct song_info {
     uint _album_updated;
 } song_info_t;
 
-#define FUNC_ON_UPDATE_GENERATE(name) void (*(name))(song_info_t *, uid_t)
-#define FUNC_ON_UPDATE_TYPE void (*)(song_info_t *, uid_t)
+#define FUNC_ON_UPDATE_GENERATE(name) void (*(name))(song_info_t *)
+#define FUNC_ON_UPDATE_TYPE void (*)(song_info_t *)
 
 void detach(pid_t target_pid, mach_port_name_t target_exception_port);
 
