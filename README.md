@@ -2,6 +2,8 @@ NeteaseCloudMusic-Now-Playing
 ======
 通过进程注入的方式来获得 macOS 网易云音乐的正在播放信息
 
+![screenshot.png](screenshot.png)
+
 ## 应用范例
 
 同步我的近期正在播放信息
