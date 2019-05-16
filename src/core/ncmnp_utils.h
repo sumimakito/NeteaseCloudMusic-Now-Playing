@@ -9,12 +9,12 @@
 #define INFO(fmt, args...)  printf("\e[96minfo: " fmt "\e[0m\n", ##args)
 #else
 #ifdef NCMNP_LOGGING_NORMAL
-#define FATAL(fmt, args...) printf("fatal: " fmt, ##args); exit(EXIT_FAILURE)
-#define WARN(fmt, args...)  printf("warning: " fmt, ##args)
-#define INFO(fmt, args...)  printf("info: " fmt, ##args)
+#define FATAL(fmt, args...) printf("fatal: " fmt "\n", ##args); exit(EXIT_FAILURE)
+#define WARN(fmt, args...)  printf("warning: " fmt "\n", ##args)
+#define INFO(fmt, args...)  printf("info: " fmt "\n", ##args)
 #else
-#define FATAL(fmt, args...) printf("fatal: " fmt, ##args); exit(EXIT_FAILURE)
-#define WARN(fmt, args...)  printf("warning: " fmt, ##args)
+#define FATAL(fmt, args...) printf("fatal: " fmt "\n", ##args); exit(EXIT_FAILURE)
+#define WARN(fmt, args...)  printf("warning: " fmt "\n", ##args)
 #define INFO(fmt, args...)
 #endif
 #endif
