@@ -21,6 +21,6 @@ typedef struct song_info {
 
 void detach(pid_t target_pid, mach_port_name_t target_exception_port);
 
-void attach(pid_t target_pid, void (*)(song_info_t *, uid_t));
+void attach(pid_t target_pid, FUNC_ON_UPDATE_TYPE);
 
 #endif
